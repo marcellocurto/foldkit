@@ -1,5 +1,11 @@
 # @foldkit/oxlint-plugin
 
+## 0.15.3
+
+### Patch Changes
+
+- [#1608](https://github.com/foldkit/foldkit/pull/1608) [`9d0f289`](https://github.com/foldkit/foldkit/commit/9d0f28976e5e1edd19db8118da5b43ad7c444adc) Thanks [@devinjameson](https://github.com/devinjameson)! - Recognize direct-field `Update.foldChildAt` boundaries and empty curried `toParentOutMessage` mappers. Direct-field inference requires `writeAt` to replace that field, avoiding false positives for keyed collection updates.
+
 ## 0.15.2
 
 ### Patch Changes
