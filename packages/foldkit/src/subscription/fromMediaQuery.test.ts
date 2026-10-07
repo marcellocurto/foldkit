@@ -134,11 +134,12 @@ describe('fromMediaQuery', () => {
   it('does not call matchMedia until the Stream starts', () => {
     const harness = stubMatchMedia(REDUCED_MOTION_QUERY)
 
-    fromMediaQuery({
+    const stream = fromMediaQuery({
       query: REDUCED_MOTION_QUERY,
       mapMatches: describeMatches,
     })
 
+    expect(Stream.isStream(stream)).toBe(true)
     expect(harness.matchMedia).not.toHaveBeenCalled()
   })
 
